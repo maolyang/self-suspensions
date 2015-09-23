@@ -1,0 +1,38 @@
+\usepackage{ifthen}
+\usepackage{ulem}  %% for \sout
+\normalem
+
+%%%%%%%%%%%  A couple of useful lines for tracking comments on text.
+\newcommand{\MP}[1]{\textcolor{red}{#1}}
+
+%% Is the version public or not?
+\newboolean{publicversion}
+%\setboolean{publicversion}{true}
+\setboolean{publicversion}{false}
+
+
+%% a collection of commands that are enabled/disabled in public versions
+\ifthenelse{\boolean{publicversion}}{
+   \newcommand{\grumbler}[2]{}
+   \newcommand{\changebars}[2]{#1}
+}{
+   \newcommand{\grumbler}[2]{\MP{{\bf #1}: #2}}
+%    \newcommand{\changebars}[2]{ {\tiny [check]} [{\em  #1}] [\sout{\em #2}]}
+
+   \newcommand{\changebars}[2]{\MP{{\tiny [check]}} [{\em #1}] [{\sout {\em #2}}] }
+}
+
+
+
+%%  person specific grumblers
+\newcommand{\public}[1]{\grumbler{PUBLIC}{#1}}
+\newcommand{\pramod}[1]{\grumbler{Pramod}{#1}}
+\newcommand{\rodrigo}[1]{\grumbler{Rodrigo}{#1}}
+\newcommand{\alexander}[1]{\grumbler{Alexander}{#1}}
+\newcommand{\ansley}[1]{\grumbler{Ansley}{#1}}
+
+\newcommand{\bbb}[1]{\grumbler{Bj\"{o}rn}{#1}}
+
+%% a semi-anonymous grumbler for use when you want to stir the ant
+%% pile without really making it into a fight.
+\newcommand{\devil}[1]{\grumbler{Devil's Advocate}{#1}}

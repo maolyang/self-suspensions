@@ -1,0 +1,125 @@
+\documentclass[10pt,conference,letterpaper,nofonttune]{IEEEtran}
+
+ \usepackage[top=0.5in,bottom=1in,left=1in,right=1in]{geometry}
+
+
+%\usepackage{fancyhdr}
+
+% Layout
+%\usepackage{geometry}
+\usepackage{setspace}
+%\usepackage{marginnote}
+\usepackage{float}
+\usepackage{multirow}
+
+% Annotation
+\usepackage{grumble}
+\usepackage{color}
+
+\usepackage{listings}
+\usepackage{graphicx}
+%\usepackage[justification=centering]{caption}   % caption center
+\usepackage[labelsep=period]{caption}   % caption left
+%\usepackage{caption}
+%\captionsetup{justification=centering}
+%\captionsetup{font={small}}
+
+
+% Citation style
+\usepackage[sort&compress,numbers]{natbib}	
+% Figures
+\usepackage[tight]{subfigure}
+\usepackage{epsfig}
+\usepackage{booktabs}
+%\usepackage{listings}
+
+% Math
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Typography
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage[super]{nth}
+
+% Pseudocode
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+%\usepackage{bm}
+
+% Macro support
+\usepackage{xspace}
+
+% PDF links
+\usepackage[hidelinks]{hyperref} % backref=page
+%\usepackage[draft]{hyperref} % backref=page
+
+%\usepackage[pagewise]{lineno}
+
+\input{macros}
+
+\renewcommand{\baselinestretch}{0.984}
+\allowdisplaybreaks 
+
+
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+\renewcommand{\topfraction}{.98}
+\renewcommand{\topfraction}{.98}
+\renewcommand{\textfraction}{.02}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\floatpagefraction}{.66}
+\renewcommand{\dbltopfraction}{.98}
+\renewcommand{\dblfloatpagefraction}{.66}
+
+
+% Use default spacing for now.
+\setlength{\textfloatsep}{0.2cm}
+\setlength{\dbltextfloatsep}{0.2cm}
+\setlength{\abovecaptionskip}{0.0cm}
+\setlength{\belowcaptionskip}{0.0cm}
+\setlength{\floatsep}{0.0cm}
+\setlength{\skip\footins}{6pt}
+
+
+
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}{#1}}} %DIF PREAMBLE
+%\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}}}                      %DIF PREAMBLE
+
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+\renewcommand{\paragraph}[1]{\vspace{0.2em}\noindent\textbf{{#1}}\hspace{0.5em}}
+%\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+
+
+
+
+%\input{preamble-theorems}
+%\theoremstyle{mylemthm}
+\newtheorem{lemma}{Lemma}
+\newtheorem{constraint}{Constraint}
+\newtheorem{theorem}{Theorem}
+
+%\theoremstyle{mydef}
+\newtheorem{definition}{Def.}
+
